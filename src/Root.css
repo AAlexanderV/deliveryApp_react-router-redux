@@ -1,0 +1,150 @@
+.header_top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(233, 233, 233);
+}
+.header_contacts{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header_account{
+  display: flex;
+  align-items: center;
+}
+.header_account a{
+  padding: 10px;
+  margin: 0 10px;
+}
+.account_btn{
+  background-color: #e95b10;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 10px;
+}
+.header_shopping-cart{
+  background-color: #00b7009a;
+  border-radius: 10px;
+}
+
+.header_bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: rgb(214, 214, 214);
+}
+.header_bottom nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header_bottom nav a{
+  margin: 0 10px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.menu_title{
+  text-align: center;
+}
+
+.menu_list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu_item a{
+  text-align: center;
+}
+.menu_item_img img{
+  width: 200px;
+}
+
+
+/* PIZZAS */
+.pizzas{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.pizzas_title{
+  text-align: center;
+}
+
+.pizzas_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.pizzas_list_item img{
+  width: 200px;
+  height: 200px;
+}
+
+/* ACCOUNT */
+.account{
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+
+.account_profile{
+  width: 30%;
+  min-width: 200px;
+}
+.account_profile img{
+  width: 100%;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 50%;
+}
+
+.account_content{
+  width: 70%;
+  min-width: 300px;
+}
+.account_content nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+.account_content nav a{
+  padding: 10px;
+  /* background-color: #00b7009a; */
+  /* border-radius: 10px; */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.account_content nav a.active{
+  font-weight: bold;
+  border-bottom: 2px solid #e95b10;
+}
+.account_content nav a:hover{
+  border-bottom: 2px solid #e95c1048;
+}
