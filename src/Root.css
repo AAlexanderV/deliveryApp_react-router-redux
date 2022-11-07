@@ -78,30 +78,8 @@
 }
 
 
-/* PIZZAS */
-.pizzas{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 20px 0;
-}
 
-.pizzas_title{
-  text-align: center;
-}
 
-.pizzas_list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
-.pizzas_list_item img{
-  width: 200px;
-  height: 200px;
-}
 
 /* ACCOUNT */
 .account{
@@ -148,3 +126,77 @@
 .account_content nav a:hover{
   border-bottom: 2px solid #e95c1048;
 }
+
+/* ITEMS*/
+.pizzas{
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.pizzas_title{
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.pizzas_list{
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.pizzas_list_item{
+  display: flex;
+  flex-direction: column;
+}
+.pizzas_list_item img{
+  width: 250px;
+  height: 250px;
+}
+
+.item_name{
+  font-weight: bold;
+  font-size: 20px;
+}
+.item_price{
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.item_bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.item_buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item_buttons img{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.item_cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #00b7009a;
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+/* ///////// */
+

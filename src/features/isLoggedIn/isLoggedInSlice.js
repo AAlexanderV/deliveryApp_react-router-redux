@@ -3,19 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 export const isLoggedInSlice = createSlice({
     name: "isLoggedIn",
     initialState: {
-        value: false,
+        value: localStorage.getItem("userInSession") ? true : false,
     },
     reducers: {
-        logIn: (state) => {
+        loggedInTrue: (state) => {
             state.value = true;
         },
-        logOut: (state) => {
+        loggedInFalse: (state) => {
             state.value = false;
         },
     },
 });
 
 // Action creators are generated for each case reducer function
-export const { logIn, logOut } = isLoggedInSlice.actions;
+export const { loggedInTrue, loggedInFalse } = isLoggedInSlice.actions;
 
 export default isLoggedInSlice.reducer;

@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutUserInSession } from "../features/UserInSession/UserInSessionSlice";
+import { loggedInFalse } from "../features/isLoggedIn/isLoggedInSlice";
 
 export default function HeaderTop() {
+    const UserInSession = useSelector((state) => state.UserInSession.value);
+
+    const isLoggedIn = useSelector((state) => state.isLoggedIn.value);
+
+    const dispatch = useDispatch();
+
+    const logout = () => {
+        dispatch(logoutUserInSession());
+        dispatch(loggedInFalse());
+    };
+
     return (
         <div className="header_top">
             <div className="header_logo">
@@ -17,15 +31,20 @@ export default function HeaderTop() {
                 </div>
             </div>
             <div className="header_account">
-                <Link
-                    className="account_btn"
-                    to="/login/"
-                >
-                    Account
-                </Link>
+                {isLoggedIn ? (
+                    <Link
+                        className="account_btn"
+                        to="/account/"
+                    >
+                        {"Hello, " + UserInSession.name}
+                    </Link>
+                ) : (
+                    ""
+                )}
+
                 <Link
                     className="header_shopping-cart"
-                    to="/cart"
+                    to="/account/cart"
                 >
                     <img
                         src={require("../data/images/cart-white.png")}
@@ -34,7 +53,7 @@ export default function HeaderTop() {
                     />
                 </Link>
                 <Link
-                    href="/favourites"
+                    to="/account/favourites"
                     className="header_favourites"
                     id="headerFavourites"
                 >
@@ -47,9 +66,25 @@ export default function HeaderTop() {
                         className="header_favourites-count"
                         id="headerFavouritesCount"
                     >
-                        0
+                        {UserInSession.favourites.length}
                     </span>
                 </Link>
+
+                {isLoggedIn ? (
+                    <button
+                        className="logout_btn"
+                        onClick={logout}
+                    >
+                        Logout
+                    </button>
+                ) : (
+                    <Link
+                        className="login_btn"
+                        to="/login/"
+                    >
+                        Login
+                    </Link>
+                )}
             </div>
         </div>
     );
