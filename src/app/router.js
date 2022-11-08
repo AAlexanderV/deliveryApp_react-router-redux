@@ -3,11 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root";
 import Menu from "../components/Menu";
 import Pizzas from "../components/Pizzas";
-import PizzaItem from "../components/PizzaItem";
 import Sushi from "../components/Sushi";
-import SushiItem from "../components/SushiItem";
 import Drinks from "../components/Drinks";
-import DrinksItem from "../components/DrinksItem";
+import IndividualItem from "../components/IndividualItem";
 import Login from "../components/Login";
 import Account from "../components/Account";
 import AccountFavourites from "../components/AccountFavourites";
@@ -29,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/pizza/:id/",
-                element: <PizzaItem />,
+                element: <IndividualItem />,
             },
             {
                 path: "/sushi/",
@@ -37,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/sushi/:id/",
-                element: <SushiItem />,
+                element: <IndividualItem />,
             },
             {
                 path: "/drinks/",
@@ -45,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/drinks/:id/",
-                element: <DrinksItem />,
+                element: <IndividualItem />,
             },
             // ACCOUNT
             {

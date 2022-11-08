@@ -63,8 +63,6 @@ export const userInSessionSlice = createSlice({
             localStorage.setItem("users", JSON.stringify(users));
         },
         addToCart: (state, action) => {
-            // { id: "pepperoni", count: 2 },
-
             const cartNew = [...state.value.cart];
             let index = cartNew.findIndex((item) => item.id === action.payload);
 
@@ -73,6 +71,49 @@ export const userInSessionSlice = createSlice({
             } else {
                 cartNew.push({ id: action.payload, count: 1 });
             }
+
+            state.value = {
+                ...state.value,
+                cart: cartNew,
+            };
+
+            localStorage.setItem("userInSession", JSON.stringify(state.value));
+
+            const users = JSON.parse(localStorage.getItem("users"));
+            const i = users.findIndex((i) => state.value.email === i.email);
+
+            users[i].cart = cartNew;
+            localStorage.setItem("users", JSON.stringify(users));
+        },
+        reduceCartItemQuantity: (state, action) => {
+            const cartNew = [...state.value.cart];
+            let index = cartNew.findIndex((item) => item.id === action.payload);
+
+            if (cartNew[index].count > 1) {
+                cartNew[index].count -= 1;
+
+                state.value = {
+                    ...state.value,
+                    cart: cartNew,
+                };
+
+                localStorage.setItem(
+                    "userInSession",
+                    JSON.stringify(state.value)
+                );
+
+                const users = JSON.parse(localStorage.getItem("users"));
+                const i = users.findIndex((i) => state.value.email === i.email);
+
+                users[i].cart = cartNew;
+                localStorage.setItem("users", JSON.stringify(users));
+            }
+        },
+        deleteCartItem: (state, action) => {
+            const cartNew = [...state.value.cart];
+            let index = cartNew.findIndex((item) => item.id === action.payload);
+
+            cartNew.splice(index, 1);
 
             state.value = {
                 ...state.value,
@@ -96,6 +137,8 @@ export const {
     logoutUserInSession,
     toggleFavouriteItem,
     addToCart,
+    reduceCartItemQuantity,
+    deleteCartItem,
 } = userInSessionSlice.actions;
 
 export default userInSessionSlice.reducer;

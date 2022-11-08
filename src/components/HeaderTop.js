@@ -17,13 +17,16 @@ export default function HeaderTop() {
 
     return (
         <div className="header_top">
-            <div className="header_logo">
+            <Link
+                className="header_logo"
+                to="/"
+            >
                 <img
                     src={require("../data/images/pizza-logo.png")}
                     alt="favourite"
                     height="100"
                 />
-            </div>
+            </Link>
             <div className="header_contacts">
                 <div className="phone">+1(234)567-89-00</div>
                 <div className="workingHours">
@@ -46,22 +49,30 @@ export default function HeaderTop() {
                     className="header_shopping-cart"
                     to="/account/cart"
                 >
-                    <img
-                        src={require("../data/images/cart-white.png")}
-                        alt="cart"
-                        height="20"
-                    />
+                    {UserInSession.cart.length > 0 ? (
+                        UserInSession.cart.length
+                    ) : (
+                        <img
+                            src={require("../data/images/cart-white.png")}
+                            alt="cart"
+                            height="20"
+                        />
+                    )}
                 </Link>
+
                 <Link
                     to="/account/favourites"
                     className="header_favourites"
                     id="headerFavourites"
                 >
+                    {/* /////// */}
                     <img
                         src={require("../data/images/favourite-true.png")}
                         alt="favourite"
-                        height="20"
+                        height="30"
                     />
+
+                    {/* ///// */}
                     <span
                         className="header_favourites-count"
                         id="headerFavouritesCount"

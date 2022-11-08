@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgb(233, 233, 233);
 }
 .header_contacts{
   display: flex;
@@ -15,26 +14,76 @@
   align-items: center;
 }
 .header_account a{
-  padding: 10px;
+  padding: 12px;
   margin: 0 10px;
 }
-.account_btn{
+.header_account .account_btn{
+  margin-right: 50px;
   background-color: #e95b10;
   color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 10px;
+  height: 49px;
 }
 .header_shopping-cart{
   background-color: #00b7009a;
   border-radius: 10px;
+  text-decoration: none;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header_favourites{
+  position: relative;
+}
+.header_favourites-count{
+  position: absolute;
+  top: -5px;
+  right: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(233, 21, 21);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logout_btn{
+  height: 49px;
+  width: 120px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(233, 21, 21);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.login_btn{
+  height: 49px;
+  width: 120px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #00b7009a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header_bottom{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 10px 0;
-  padding: 15px;
+  padding: 25px 15px;
   background-color: rgb(214, 214, 214);
 }
 .header_bottom nav{
@@ -51,11 +100,15 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 20px 0;
+  padding: 20px 0 50px 0;
+  background-color: rgb(233, 233, 233);
 }
 
 .menu_title{
   text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 30px 0;
 }
 
 .menu_list{
@@ -68,6 +121,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .menu_item a{
@@ -89,11 +145,16 @@
 }
 
 .account_profile{
-  width: 25%;
+  width: 24%;
   min-width: 200px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .account_profile img{
-  width: 100%;
+  max-width: 350px;
+  min-width: 90%;
   border: 1px solid rgb(228, 228, 228);
   border-radius: 50%;
 }
@@ -102,7 +163,7 @@
 }
 
 .account_content{
-  width: 75%;
+  width: 74%;
   min-width: 300px;
 }
 .account_content nav{
@@ -114,42 +175,184 @@
   margin: 10px 0;
 }
 .account_content nav a{
+  display: flex;
+  font-display: row;
   padding: 10px;
   /* background-color: #00b7009a; */
   /* border-radius: 10px; */
   color: rgb(0, 0, 0);
   text-decoration: none;
+  font-size: 20px;
 }
 .account_content nav a.active{
   font-weight: bold;
   border-bottom: 2px solid #e95b10;
+  font-size: 24px;
 }
 .account_content nav a:hover{
   border-bottom: 2px solid #e95c1048;
 }
+.favourite_img{
+  margin-left: 10px;
+}
+.cart_img{
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00b7009a;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+}
+.cart_img img{
+  width: 15px;
+  height: 15px;
+}
 
 .account_favourites{
-  margin: 10px 15px;
+  margin: 20px 15px 10px 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
-
+.account_favourites_item{
+  margin: 15px 10px;
+}
 .account_favourites_item img{
   width: 200px;
-
 }
 
+/* Account CART */
+.account_cart{
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+}
+
+.cart_itemList{
+  /* width: 100%; */
+  margin: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart_item{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart_item img{
+  width: 200px;
+}
+
+.cart_item_info{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart_item_name{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart_item_price{
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.quantity_switcher{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.minus, .plus {
+  background: #5ebd11;
+  width: 49px;
+  height: 49px;
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 45px;
+  cursor: pointer;
+  border: none;
+}
+.item_count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  width: 49px;
+  height: 49px;
+  font-size: 18px;
+}
+
+.cart_item_delete{
+  height: 49px;
+  width: fit-content;
+  min-width: 15%;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(233, 21, 21);
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.account_cart_footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.cart_total{
+  width: 50%;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px dashed  #d9d9d9;
+}
+.cart_total p, .cart_total h3{
+  margin: 5px 0;
+}
+
+.pay_container{
+  display: flex;
+  justify-content: center;
+}
+.cart_payBtn{
+  margin: 45px 0;
+  width: 50%;
+  min-width: 200px;
+  max-width: 500px;
+  height: 49px;
+  background: #5ebd11;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
 
 /* ITEMS*/
 .pizzas, .sushi, .drinks{
   width: 100%;
-  margin: 10px;
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
+  padding: 50px 0;
+  background-color: rgb(233, 233, 233);
 }
 
 .pizzas_title, .sushi_title, .drinks_title{
@@ -168,6 +371,9 @@
 .pizzas_list_item, .sushi_list_item, .drinks_list_item{
   display: flex;
   flex-direction: column;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 .pizzas_list_item img{
   width: 250px;
@@ -220,3 +426,117 @@
 }
 /* ///////// */
 
+.individual_item{
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.individual_item_img{
+  width: fit-content;
+}
+.individual_item img{
+  max-width: 300px;
+}
+
+.individual_item_name{
+  margin: 10px 0;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+.individual_item_price{
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+.individual_item_description{
+  margin-top: 10px;
+}
+.individual_item_ingredients{
+  margin: 10px 0;
+}
+
+.individual_item_buttons{
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.individual_item_favourite{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.individual_item_favourite img{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.individual_item_cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00b7009a;
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+/* LOGIN FORM */
+.userForms_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.loginForm, .registrationForm{
+  width: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 40px;
+}
+.registrationForm{
+  height: 400px;
+}
+.wrongUser-Email{
+  font-weight: bold;
+  font-size: 18px;
+  color: red;
+}
+.loginForm input, .registrationForm input{
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #444;
+  background-color: #fff;
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+}
+.submit_button{
+  height: 49px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  background-color: #00b7009a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}

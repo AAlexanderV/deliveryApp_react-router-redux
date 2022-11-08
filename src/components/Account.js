@@ -34,13 +34,28 @@ export default function Account() {
                         onClick={toggleActive}
                     >
                         Shopping cart
+                        <div className="cart_img">
+                            <img
+                                src={require("../data/images/cart-white.png")}
+                                alt="cart"
+                                height="20"
+                            />
+                        </div>
                     </Link>
+
                     <Link
                         to="/account/favourites/"
                         id="accountToFavouritesBtn"
                         onClick={toggleActive}
                     >
                         Favourites
+                        <div className="favourite_img">
+                            <img
+                                src={require("../data/images/favourite-true.png")}
+                                alt="favourite"
+                                height="20"
+                            />
+                        </div>
                     </Link>
                 </nav>
                 <Outlet />
