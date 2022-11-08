@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 10px 0;
 }
 .header_contacts{
   display: flex;
@@ -380,6 +381,7 @@
   text-align: center;
   font-size: 26px;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .pizzas_list, .sushi_list, .drinks_list{
@@ -390,6 +392,7 @@
   flex-wrap: wrap;
 }
 .pizzas_list_item, .sushi_list_item, .drinks_list_item{
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
@@ -404,7 +407,7 @@
 }
 
 
-.pizzas_list_item img{
+.pizzas_list_item img, .sushi_list_item img, .drinks_list_item img{
   width: 250px;
   height: 250px;
 }
@@ -427,6 +430,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 15px;
 }
 
 .item_buttons{

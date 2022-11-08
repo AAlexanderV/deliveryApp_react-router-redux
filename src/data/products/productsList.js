@@ -95,6 +95,49 @@ const PRODUCTS = [
         ingredients: "",
         description: "some big text with description",
     },
+    {
+        name: "Marinara",
+        id: "marinara",
+        category: "pizza",
+        price: 134,
+        ingredients:
+            "Creamy Alfredo Sauce (Base), squid, tiger shrimp, mussels, olives, mozzarella",
+        description: "some big text with description",
+    },
+    {
+        name: "Kebab",
+        id: "kebab",
+        category: "pizza",
+        price: 132,
+        ingredients:
+            "Tomato Sauce (Basic), lamb kebab, red tsibulya, bell pepper, tomato, eggplant, mozzarella",
+        description: "some big text with description",
+    },
+    {
+        name: "Meatty",
+        id: "meatty",
+        category: "pizza",
+        price: 132,
+        ingredients:
+            "Tomato Sauce (Base), ham, Italian sausages, grilled cock 'halal', salami pepperoni, halal meat 'halal', mit ball, mozzarella",
+        description: "some big text with description",
+    },
+    {
+        name: "Corona",
+        id: "corona",
+        category: "drinks",
+        price: 77,
+        ingredients: "bear",
+        description: "some big text with description",
+    },
+    {
+        name: "Heineken",
+        id: "heineken",
+        category: "drinks",
+        price: 77,
+        ingredients: "bear",
+        description: "some big text with description",
+    },
 ];
 
 export default PRODUCTS;
