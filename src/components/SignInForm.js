@@ -71,7 +71,7 @@ export default function SignInForm() {
                 />
             </label>
 
-            <button className="submit_button">Enter</button>
+            <button className="submit_button">Log in</button>
         </form>
     );
 }

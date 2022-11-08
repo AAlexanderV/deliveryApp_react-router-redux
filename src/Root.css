@@ -84,15 +84,26 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 25px 15px;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(191, 191, 191);
 }
 .header_bottom nav{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  min-width: 20%;
+  max-width: 600px;
 }
-.header_bottom nav a{
+.header_bottom a{
   margin: 0 10px;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.header_bottom a:hover{
+  scale: 1.1;
+  color: rgb(205, 27, 27);
 }
 
 .menu {
@@ -124,10 +135,19 @@
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
+  transition: all .2s linear;
+}
+.menu_item:hover{
+  scale: 1.05;
+  box-shadow: 3px 3px 10px rgb(152, 152, 152);
 }
 
 .menu_item a{
   text-align: center;
+  text-decoration: none;
+  color: #e95a10;
+  font-size: 22px;
+
 }
 .menu_item_img img{
   width: 200px;
@@ -374,7 +394,15 @@
   padding: 40px 20px;
   background-color: #fff;
   border-radius: 10px;
+  transition: all .1s linear;
 }
+
+.pizzas_list_item:hover, .sushi_list_item:hover, .drinks_list_item:hover {
+  scale: 1.05;
+  box-shadow: 3px 3px 10px rgb(152, 152, 152);
+}
+
+
 .pizzas_list_item img{
   width: 250px;
   height: 250px;
