@@ -79,8 +79,6 @@
 
 
 
-
-
 /* ACCOUNT */
 .account{
   width: 100%;
@@ -91,7 +89,7 @@
 }
 
 .account_profile{
-  width: 30%;
+  width: 25%;
   min-width: 200px;
 }
 .account_profile img{
@@ -99,9 +97,12 @@
   border: 1px solid rgb(228, 228, 228);
   border-radius: 50%;
 }
+.account_profile h2, .account_profile h3{
+  text-align: center;
+}
 
 .account_content{
-  width: 70%;
+  width: 75%;
   min-width: 300px;
 }
 .account_content nav{
@@ -127,8 +128,23 @@
   border-bottom: 2px solid #e95c1048;
 }
 
+.account_favourites{
+  margin: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.account_favourites_item img{
+  width: 200px;
+
+}
+
+
 /* ITEMS*/
-.pizzas{
+.pizzas, .sushi, .drinks{
   width: 100%;
   margin: 10px;
   display: flex;
@@ -136,25 +152,29 @@
   margin: 20px 0;
 }
 
-.pizzas_title{
+.pizzas_title, .sushi_title, .drinks_title{
   text-align: center;
   font-size: 26px;
   font-weight: bold;
 }
 
-.pizzas_list{
+.pizzas_list, .sushi_list, .drinks_list{
   margin: 10px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.pizzas_list_item{
+.pizzas_list_item, .sushi_list_item, .drinks_list_item{
   display: flex;
   flex-direction: column;
 }
 .pizzas_list_item img{
   width: 250px;
+  height: 250px;
+}
+.sushi_list_item img{
+  /* width: 250px; */
   height: 250px;
 }
 
