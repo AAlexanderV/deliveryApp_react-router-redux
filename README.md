@@ -1,3 +1,6 @@
+Delivery APP:
+https://react-router-redux-pizza-delivery.netlify.app/
+
 In order to use FAVOURITES and SHOPPING-CART buttons, you need to register.
 Default user for test purposes is:
 User-email: ivan@gmail.com
